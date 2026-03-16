@@ -15,21 +15,18 @@
   --text:#e8f0e8;--muted:#5a7a5a;--muted2:#3a5a3a;
   --border:rgba(57,255,20,.1);--border2:rgba(57,255,20,.2);
   --mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Bebas Neue',sans-serif;
-  /* SOM colors */
-  --cyan:#00d4ff;--cyan-dim:rgba(0,212,255,.12);--ocean:#041428;
+  --cyan:#00d4ff;
+  --rum:#c8860a;--skull:#e8dcc8;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#16a34a;border-radius:99px}
-
-/* ── CURSOR ── */
 .cursor{width:12px;height:12px;background:var(--green);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference}
 .cursor-ring{width:36px;height:36px;border:1.5px solid var(--green);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;opacity:.45}
-
 .skip{position:absolute;top:-100px;left:16px;z-index:9999;background:var(--green);color:#000;padding:8px 18px;border-radius:0 0 8px 8px;font-weight:700;text-decoration:none;font-family:var(--mono);font-size:.8rem}
 .skip:focus{top:0}
 
-/* ── NAVBAR ── */
+/* NAVBAR */
 #navbar{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:200;display:flex;align-items:center;background:rgba(13,19,13,.88);border:1px solid var(--border2);border-radius:999px;backdrop-filter:blur(20px);padding:6px 6px 6px 22px;box-shadow:0 4px 40px rgba(0,0,0,.5);transition:box-shadow .3s;white-space:nowrap}
 .nav-logo{font-family:var(--mono);font-size:.82rem;color:var(--green);letter-spacing:.12em;text-decoration:none;margin-right:20px;flex-shrink:0}
 .nav-logo span{color:var(--muted)}
@@ -38,7 +35,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 .nav-links li a:hover,.nav-links li a.active{color:var(--green);background:rgba(57,255,20,.1)}
 .nav-cta{background:var(--green);color:#000;border:none;border-radius:999px;padding:9px 20px;font-size:.72rem;font-weight:700;font-family:var(--mono);cursor:pointer;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;flex-shrink:0;transition:box-shadow .2s,transform .15s}
 .nav-cta:hover{box-shadow:0 0 24px var(--green-glow);transform:scale(1.04)}
-.hamburger{display:none;background:none;border:none;color:var(--green);font-size:22px;cursor:pointer;padding:4px 8px;line-height:1}
+.hamburger{display:none;background:none;border:none;color:var(--green);font-size:22px;cursor:pointer;padding:4px 8px}
 .mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,12,8,.97);backdrop-filter:blur(24px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:8px}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:var(--display);font-size:2.8rem;color:var(--text);text-decoration:none;padding:8px 20px;transition:color .2s}
@@ -47,7 +44,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 .mobile-menu .m-cta{background:var(--green);color:#000;border-radius:8px;font-family:var(--mono);font-weight:700;padding:14px 32px;margin-top:12px;text-transform:uppercase;font-size:.9rem}
 @media(max-width:820px){#navbar{top:12px;padding:6px 10px 6px 16px}.nav-links,.nav-cta{display:none}.hamburger{display:block}}
 
-/* ── HERO ── */
+/* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 60px;position:relative;overflow:hidden}
 #hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;animation:gridFade 8s ease infinite alternate}
 #hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(57,255,20,.06),transparent 60%)}
@@ -87,18 +84,18 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* ── SOBRE ── */
+/* SOBRE */
 #sobre{background:var(--s1)}
 .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 @media(max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:40px}}
 .sobre-texto p{font-size:1.05rem;line-height:1.85;color:#a0b8a0;margin-bottom:20px}
-.sobre-texto strong{color:var(--text);font-weight:600}
+.sobre-texto strong{color:var(--text)}
 .sobre-texto .g{color:var(--green);font-family:var(--mono)}
 .edu-list{display:flex;flex-direction:column;gap:12px;margin-top:8px;margin-bottom:20px}
 .edu-item{display:flex;align-items:flex-start;gap:14px;background:rgba(57,255,20,.04);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
 .edu-icon{flex-shrink:0;width:38px;height:38px;background:var(--green-dim);border:1px solid var(--border2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:15px}
 .edu-title{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:3px}
-.edu-sub{font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.04em}
+.edu-sub{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
 .edu-badge{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:.6rem;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.06em}
 .edu-badge.done{background:rgba(57,255,20,.1);color:var(--green);border:1px solid var(--border2)}
 .edu-badge.ongoing{background:rgba(234,179,8,.08);color:#eab308;border:1px solid rgba(234,179,8,.25)}
@@ -109,7 +106,7 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .skill-bar{height:3px;background:var(--s3);border-radius:99px;overflow:hidden}
 .skill-fill{height:100%;background:var(--green);border-radius:99px;width:0;transition:width 1.2s cubic-bezier(.34,1.56,.64,1)}
 
-/* ── SERVIÇOS ── */
+/* SERVICOS */
 #servicos{background:var(--bg)}
 .servicos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:1100px) and (min-width:701px){.servicos-grid{grid-template-columns:repeat(2,1fr)}}
@@ -126,7 +123,7 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .servico-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
 .stag{font-family:var(--mono);font-size:.65rem;color:var(--green);background:var(--green-dim);border:1px solid var(--border2);padding:3px 9px;border-radius:4px;text-transform:uppercase;letter-spacing:.06em}
 
-/* ── PROJETOS ── */
+/* PROJETOS GRID */
 #projetos{background:var(--s1)}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 @media(max-width:700px){.proj-grid{grid-template-columns:1fr}}
@@ -147,23 +144,22 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .proj-link:hover{background:var(--green-dim);box-shadow:0 0 14px var(--green-glow)}
 .proj-card.feat{grid-column:span 2}
 @media(max-width:700px){.proj-card.feat{grid-column:span 1}}
+.proj-logo-svg{width:48px;height:48px;border-radius:10px;border:1px solid var(--border2);background:var(--s3);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
 
-/* ─── FEAT CARD (DedBoll) ─── */
+/* FEAT INNER */
 .feat-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:460px}
 @media(max-width:900px){.feat-inner{grid-template-columns:1fr;min-height:auto}}
-.feat-left{padding:28px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:18px}
-@media(max-width:900px){.feat-left{border-right:none;border-bottom:1px solid var(--border)}}
 .feat-right{display:flex;flex-direction:column}
 .feat-media-top{position:relative;overflow:hidden;background:var(--s3);height:300px}
 @media(min-width:901px){.feat-media-top{flex:1;height:auto;min-height:280px}}
 .feat-media-bottom{height:180px;position:relative;overflow:hidden;background:#000;border-top:1px solid var(--border);flex-shrink:0}
 @media(max-width:640px){.feat-media-bottom{height:200px}}
 
-/* ─── SLIDESHOW ─── */
+/* SLIDESHOW */
 .proj-slideshow{position:relative;width:100%;height:100%;overflow:hidden;cursor:pointer;touch-action:pan-y}
 .slide-track{display:flex;height:100%;transition:transform .4s cubic-bezier(.4,0,.2,1);will-change:transform}
 .slide-frame{flex-shrink:0;width:100%;height:100%;position:relative;overflow:hidden;background:var(--s3)}
-.slide-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,var(--s2) 0%,var(--s3) 100%);border:1px dashed var(--border2)}
+.slide-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,var(--s2),var(--s3));border:1px dashed var(--border2)}
 .slide-placeholder-icon{width:64px;height:64px;border-radius:16px;background:var(--green-dim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--green)}
 .slide-placeholder-title{font-family:var(--display);font-size:1.4rem;color:var(--text);text-align:center;padding:0 20px;line-height:1.2}
 .slide-placeholder-sub{font-family:var(--mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:0 20px;line-height:1.6;max-width:280px}
@@ -180,404 +176,224 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .slide-count{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:.6rem;color:#fff;background:rgba(0,0,0,.65);padding:3px 8px;border-radius:4px;z-index:4;pointer-events:none}
 .video-badge{position:absolute;top:10px;left:10px;background:var(--green);color:#000;font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;z-index:3;display:flex;align-items:center;gap:5px}
 .video-dot{width:7px;height:7px;border-radius:50%;background:#000;animation:pulse 2s ease infinite}
-.video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#000 0%,#0d0d0d 100%);border:1px dashed rgba(57,255,20,.15)}
+.video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#000,#0d0d0d);border:1px dashed rgba(57,255,20,.15)}
 .video-placeholder i{font-size:2.2rem;color:rgba(57,255,20,.3)}
 .video-placeholder p{font-family:var(--mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:0 20px;line-height:1.6}
-.proj-logo-svg{width:48px;height:48px;border-radius:10px;border:1px solid var(--border2);background:var(--s3);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
 
-/* ─────────────────────────────────────────────
-   CARD DEDBOLL — CAMPO DE FUTEBOL
-───────────────────────────────────────────── */
-.proj-card.dedboll-card{
-  background:#0a1f0a;
-  border-color:rgba(57,255,20,.3);
-  position:relative;
-  overflow:hidden;
-}
-.proj-card.dedboll-card:hover{
-  border-color:rgba(57,255,20,.6);
-  transform:translateY(-4px);
-  box-shadow:0 24px 70px rgba(57,255,20,.12),0 0 0 1px rgba(57,255,20,.15);
-}
-
-/* ── HEADER = campo de futebol SVG ── */
-.dedboll-pitch-wrap{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  border-bottom:2px solid rgba(57,255,20,.25);
-  flex-shrink:0;
-}
-
-/* grama listrada */
-.dedboll-pitch-bg{
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(
-    90deg,
-    #0d260d 0px,
-    #0d260d 28px,
-    #112e11 28px,
-    #112e11 56px
-  );
-}
-
-/* canvas do campo (SVG inline via CSS paint) */
-.dedboll-pitch-svg{
-  position:relative;
-  z-index:1;
-  width:100%;
-  display:block;
-}
-
-/* badge no canto do campo */
-.dedboll-pitch-badge{
-  position:absolute;
-  top:10px;
-  left:12px;
-  z-index:5;
-  background:rgba(8,12,8,.85);
-  border:1px solid rgba(57,255,20,.35);
-  border-radius:6px;
-  padding:4px 10px;
-  font-family:var(--mono);
-  font-size:.58rem;
-  color:#eab308;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  display:flex;
-  align-items:center;
-  gap:5px;
-  backdrop-filter:blur(4px);
-}
-.dedboll-bola{
-  display:inline-block;
-  font-size:.75rem;
-  animation:bolaSpin 3s linear infinite;
-}
-@keyframes bolaSpin{
-  from{transform:rotate(0deg)}
-  to{transform:rotate(360deg)}
-}
-
-/* ícones de funcionalidade no campo */
-.dedboll-feat-icons{
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  z-index:5;
-  display:flex;
-  gap:6px;
-}
-.dedboll-feat-icon{
-  width:28px;
-  height:28px;
-  background:rgba(8,12,8,.8);
-  border:1px solid rgba(57,255,20,.3);
-  border-radius:6px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  color:var(--green);
-  backdrop-filter:blur(4px);
-}
-
-/* ── LADO ESQUERDO (info) com textura de grama sutil ── */
-.dedboll-left{
-  padding:28px;
-  border-right:1px solid rgba(57,255,20,.12);
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  background:
-    radial-gradient(ellipse at 0% 100%,rgba(57,255,20,.04) 0%,transparent 55%),
-    #0a1f0a;
-  position:relative;
-}
-.dedboll-left::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(
-    0deg,
-    transparent 0px,
-    transparent 18px,
-    rgba(57,255,20,.018) 18px,
-    rgba(57,255,20,.018) 19px
-  );
-  pointer-events:none;
-}
+/* ===== DEDBOLL — CAMPO DE FUTEBOL ===== */
+.proj-card.dedboll-card{background:#0a1f0a;border-color:rgba(57,255,20,.3);position:relative;overflow:hidden}
+.proj-card.dedboll-card:hover{border-color:rgba(57,255,20,.6);transform:translateY(-4px);box-shadow:0 24px 70px rgba(57,255,20,.12)}
+.dedboll-pitch-wrap{position:relative;width:100%;overflow:hidden;border-bottom:2px solid rgba(57,255,20,.25);flex-shrink:0}
+.dedboll-pitch-bg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#0d260d 0px,#0d260d 28px,#112e11 28px,#112e11 56px)}
+.dedboll-pitch-svg{position:relative;z-index:1;width:100%;display:block}
+.dedboll-pitch-badge{position:absolute;top:10px;left:12px;z-index:5;background:rgba(8,12,8,.85);border:1px solid rgba(57,255,20,.35);border-radius:6px;padding:4px 10px;font-family:var(--mono);font-size:.58rem;color:#eab308;text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:5px;backdrop-filter:blur(4px)}
+.dedboll-bola{display:inline-block;font-size:.75rem;animation:bolaSpin 3s linear infinite}
+@keyframes bolaSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.dedboll-feat-icons{position:absolute;bottom:10px;right:10px;z-index:5;display:flex;gap:6px}
+.dedboll-feat-icon{width:28px;height:28px;background:rgba(8,12,8,.8);border:1px solid rgba(57,255,20,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--green);backdrop-filter:blur(4px)}
+.dedboll-left{padding:28px;border-right:1px solid rgba(57,255,20,.12);display:flex;flex-direction:column;gap:18px;background:radial-gradient(ellipse at 0% 100%,rgba(57,255,20,.04) 0%,transparent 55%),#0a1f0a;position:relative}
+.dedboll-left::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0px,transparent 18px,rgba(57,255,20,.018) 18px,rgba(57,255,20,.018) 19px);pointer-events:none}
 @media(max-width:900px){.dedboll-left{border-right:none;border-bottom:1px solid rgba(57,255,20,.12)}}
+.dedboll-progress{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.dedboll-progress-label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.dedboll-progress-label span:last-child{color:var(--green)}
+.dedboll-progress-bar{height:4px;background:rgba(57,255,20,.1);border-radius:99px;overflow:hidden;border:1px solid rgba(57,255,20,.15)}
+.dedboll-progress-fill{height:100%;width:65%;background:linear-gradient(90deg,#16a34a,var(--green));border-radius:99px;position:relative;animation:dedbollProg 2s ease both}
+@keyframes dedbollProg{from{width:0}to{width:65%}}
+.dedboll-progress-fill::after{content:'';position:absolute;top:0;right:0;bottom:0;width:18px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4));animation:shine 2s 2s ease-in-out infinite}
+@keyframes shine{0%{opacity:0;transform:translateX(-20px)}50%{opacity:1}100%{opacity:0;transform:translateX(0)}}
+.ttag-field{font-family:var(--mono);font-size:.63rem;color:#6dbf6d;background:rgba(57,255,20,.06);border:1px solid rgba(57,255,20,.18);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em}
+.proj-link-field{font-family:var(--mono);font-size:.72rem;color:var(--green);border:1px solid rgba(57,255,20,.25);padding:7px 14px;border-radius:6px;text-decoration:none;transition:background .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:6px;background:rgba(57,255,20,.04)}
+.proj-link-field:hover{background:rgba(57,255,20,.12);box-shadow:0 0 18px rgba(57,255,20,.2)}
 
-/* barra de progresso de desenvolvimento */
-.dedboll-progress{
+/* ===== S.O.M — PIRATA + MAR (FEAT CARD) ===== */
+.proj-card.som-card{
+  background:linear-gradient(180deg,#071520 0%,#0b2030 45%,#071520 100%);
+  border-color:rgba(200,134,10,.3);
+  position:relative;
+  overflow:hidden;
+  grid-column:span 2;
+}
+@media(max-width:700px){.proj-card.som-card{grid-column:span 1}}
+.proj-card.som-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 30%,rgba(0,80,140,.2) 0%,transparent 50%),radial-gradient(ellipse at 85% 70%,rgba(0,60,100,.15) 0%,transparent 45%);pointer-events:none}
+.proj-card.som-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rum),#ffd700,var(--rum),transparent);animation:pirateGold 4s ease-in-out infinite}
+@keyframes pirateGold{0%,100%{opacity:.5;transform:scaleX(.6)}50%{opacity:1;transform:scaleX(1)}}
+.proj-card.som-card:hover{border-color:rgba(200,134,10,.6);transform:translateY(-4px);box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 40px rgba(200,134,10,.1)}
+
+/* LAYOUT INTERNO: esquerda (barco + info) | direita (iframe) */
+.som-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:480px;
+}
+@media(max-width:900px){.som-inner{grid-template-columns:1fr}}
+
+/* COLUNA ESQUERDA — barco + body */
+.som-left{
   display:flex;
   flex-direction:column;
-  gap:6px;
-  margin-top:4px;
+  border-right:1px solid rgba(200,134,10,.15);
 }
-.dedboll-progress-label{
+@media(max-width:900px){.som-left{border-right:none;border-bottom:1px solid rgba(200,134,10,.15)}}
+
+.som-ocean-header{position:relative;width:100%;overflow:hidden;background:linear-gradient(180deg,#020c18,#041828 60%,#061e32);flex-shrink:0}
+.som-ocean-svg{width:100%;display:block}
+.som-pirate-badge{position:absolute;top:10px;left:12px;z-index:5;background:rgba(5,12,22,.88);border:1px solid rgba(200,134,10,.45);border-radius:6px;padding:5px 12px;font-family:var(--mono);font-size:.58rem;color:#ffd700;text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:7px;backdrop-filter:blur(4px)}
+.som-skull-spin{display:inline-block;font-size:.85rem;animation:skullFloat 3s ease-in-out infinite}
+@keyframes skullFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-3px) rotate(5deg)}}
+.som-live-badge{position:absolute;top:10px;right:12px;z-index:5;background:rgba(5,12,22,.88);border:1px solid rgba(0,212,255,.3);border-radius:6px;padding:5px 12px;font-family:var(--mono);font-size:.58rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px)}
+.som-live-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:pulse 2s ease infinite}
+.som-waves{position:absolute;bottom:0;left:0;right:0;height:28px;overflow:hidden;pointer-events:none}
+.som-wave-layer{position:absolute;bottom:0;left:-40px;right:-40px;height:28px}
+.som-wave-layer path{fill:rgba(0,150,220,.15)}
+.som-wave-layer:nth-child(1){animation:waveScroll1 6s linear infinite}
+.som-wave-layer:nth-child(2){animation:waveScroll2 9s linear infinite;opacity:.6}
+@keyframes waveScroll1{from{transform:translateX(0)}to{transform:translateX(40px)}}
+@keyframes waveScroll2{from{transform:translateX(40px)}to{transform:translateX(0)}}
+
+.som-body{padding:20px 24px 22px;position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.som-body::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0px,transparent 22px,rgba(200,134,10,.03) 22px,rgba(200,134,10,.03) 23px);pointer-events:none}
+.som-title{font-family:var(--display);font-size:1.65rem;margin-bottom:4px;color:var(--skull);display:flex;align-items:center;gap:10px;line-height:1}
+.som-title-anchor{font-size:1.1rem;color:var(--rum);display:inline-block;animation:anchorSway 4s ease-in-out infinite;transform-origin:top center}
+@keyframes anchorSway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.som-title-name{color:var(--cyan)}
+.som-remake-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,134,10,.1);border:1px solid rgba(200,134,10,.3);border-radius:4px;padding:3px 10px;font-family:var(--mono);font-size:.56rem;color:var(--rum);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.som-desc{font-size:.87rem;color:#7a9db8;line-height:1.75;margin-bottom:16px}
+.som-desc strong{color:var(--skull)}
+.som-desc .som-hl{color:var(--rum);font-family:var(--mono)}
+.som-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.ttag-som{font-family:var(--mono);font-size:.62rem;color:rgba(0,212,255,.7);background:rgba(0,40,80,.5);border:1px solid rgba(0,150,220,.2);padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em}
+.proj-link-som{font-family:var(--mono);font-size:.72rem;color:var(--cyan);border:1px solid rgba(0,212,255,.3);padding:7px 14px;border-radius:6px;text-decoration:none;transition:background .2s,box-shadow .2s,border-color .2s;display:inline-flex;align-items:center;gap:6px;background:rgba(0,40,80,.3)}
+.proj-link-som:hover{background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.6);box-shadow:0 0 20px rgba(0,212,255,.2)}
+.proj-link-som.rum{color:var(--rum);border-color:rgba(200,134,10,.35);background:rgba(60,30,5,.3)}
+.proj-link-som.rum:hover{background:rgba(200,134,10,.12);border-color:rgba(200,134,10,.7);box-shadow:0 0 20px rgba(200,134,10,.2)}
+
+/* COLUNA DIREITA — iframe preview */
+.som-right{
+  position:relative;
   display:flex;
-  justify-content:space-between;
-  font-family:var(--mono);
-  font-size:.6rem;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.07em;
+  flex-direction:column;
+  background:#020c18;
+  min-height:400px;
 }
-.dedboll-progress-label span:last-child{color:var(--green)}
-.dedboll-progress-bar{
-  height:4px;
-  background:rgba(57,255,20,.1);
-  border-radius:99px;
-  overflow:hidden;
-  border:1px solid rgba(57,255,20,.15);
-}
-.dedboll-progress-fill{
-  height:100%;
-  width:65%;
-  background:linear-gradient(90deg,#16a34a,var(--green));
-  border-radius:99px;
-  position:relative;
-  animation:dedbollProgress 2s ease both;
-}
-@keyframes dedbollProgress{from{width:0}to{width:65%}}
-.dedboll-progress-fill::after{
-  content:'';
-  position:absolute;
-  top:0;right:0;bottom:0;
-  width:18px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.4));
-  animation:progressShine 2s 2s ease-in-out infinite;
-}
-@keyframes progressShine{
-  0%{opacity:0;transform:translateX(-20px)}
-  50%{opacity:1}
-  100%{opacity:0;transform:translateX(0)}
-}
-
-/* tag de tech com cor grama */
-.ttag-field{
-  font-family:var(--mono);
-  font-size:.63rem;
-  color:#6dbf6d;
-  background:rgba(57,255,20,.06);
-  border:1px solid rgba(57,255,20,.18);
-  padding:3px 7px;
-  border-radius:4px;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-}
-
-/* link do projeto com tom grama */
-.proj-link-field{
-  font-family:var(--mono);
-  font-size:.72rem;
-  color:var(--green);
-  border:1px solid rgba(57,255,20,.25);
-  padding:7px 14px;
-  border-radius:6px;
-  text-decoration:none;
-  transition:background .2s,box-shadow .2s;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(57,255,20,.04);
-}
-.proj-link-field:hover{
-  background:rgba(57,255,20,.12);
-  box-shadow:0 0 18px rgba(57,255,20,.2);
-}
-
-/* ─────────────────────────────────────────────
-   CARD S.O.M — ESTILO OCEANO
-───────────────────────────────────────────── */
-.proj-card.som-card{
-  background:linear-gradient(160deg,#020d1a 0%,#041428 60%,#061e36 100%);
-  border-color:rgba(0,212,255,.25);
-  position:relative;
-  overflow:hidden;
-}
-.proj-card.som-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(ellipse at 80% 20%,rgba(0,212,255,.08) 0%,transparent 55%),
-    radial-gradient(ellipse at 10% 80%,rgba(0,180,220,.06) 0%,transparent 50%);
-  pointer-events:none;
-}
-/* onda animada no fundo do card */
-.proj-card.som-card::after{
-  content:'';
-  position:absolute;
-  bottom:0;left:0;right:0;
-  height:3px;
-  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
-  animation:somWave 3s ease-in-out infinite;
-}
-@keyframes somWave{
-  0%,100%{opacity:.4;transform:scaleX(.5) translateX(-50%)}
-  50%{opacity:1;transform:scaleX(1.2) translateX(0%)}
-}
-.proj-card.som-card:hover{
-  border-color:rgba(0,212,255,.55);
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px rgba(0,212,255,.1);
-}
-/* preview do site dentro do card */
-.som-preview{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  background:#020d1a;
-  border-bottom:1px solid rgba(0,212,255,.15);
-  flex-shrink:0;
-}
-.som-preview-browser{
-  background:rgba(4,20,40,.9);
-  padding:9px 14px;
+/* barra do browser */
+.som-browser-bar{
   display:flex;
   align-items:center;
   gap:10px;
-  border-bottom:1px solid rgba(0,212,255,.1);
+  padding:9px 14px;
+  background:rgba(4,16,32,.95);
+  border-bottom:1px solid rgba(200,134,10,.18);
+  flex-shrink:0;
+  position:relative;
+  z-index:2;
 }
-.som-browser-dots{display:flex;gap:5px}
-.som-browser-dot{width:9px;height:9px;border-radius:50%}
-.som-url-bar{
+.som-browser-dots-row{display:flex;gap:5px;flex-shrink:0}
+.som-browser-dot-sm{width:9px;height:9px;border-radius:50%}
+.som-url-pill{
   flex:1;
   background:rgba(0,212,255,.06);
-  border:1px solid rgba(0,212,255,.12);
-  border-radius:4px;
-  font-family:'DM Mono',monospace;
-  font-size:.62rem;
-  color:rgba(0,212,255,.6);
-  padding:4px 10px;
+  border:1px solid rgba(200,134,10,.2);
+  border-radius:5px;
+  padding:5px 11px;
+  font-family:var(--mono);
+  font-size:.58rem;
+  color:rgba(200,160,60,.65);
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+  letter-spacing:.03em;
 }
-.som-screen{
+.som-url-lock{color:rgba(0,212,255,.5);font-size:.6rem;flex-shrink:0}
+/* área do iframe */
+.som-iframe-wrap{
   position:relative;
-  height:200px;
+  flex:1;
   overflow:hidden;
+  min-height:360px;
 }
-.som-screen iframe{
-  width:100%;
-  height:100%;
+.som-iframe-wrap iframe{
+  position:absolute;
+  top:0;left:0;
+  /* escala 60% para caber no espaço — 100/0.6 = 167% de tamanho */
+  width:167%;
+  height:167%;
   border:none;
-  pointer-events:none;
-  transform:scale(1);
+  transform:scale(0.6);
   transform-origin:top left;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .8s ease;
 }
-/* fallback visual quando iframe bloquear */
-.som-screen-fallback{
+.som-iframe-wrap iframe.loaded{opacity:1}
+/* fallback quando iframe bloquear */
+.som-iframe-fallback{
   position:absolute;
   inset:0;
-  background:linear-gradient(160deg,#020d1a 0%,#041428 50%,#061e36 100%);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:12px;
+  gap:14px;
+  background:linear-gradient(160deg,#020d1a 0%,#041428 50%,#061e36 100%);
+  z-index:1;
+  transition:opacity .5s ease;
 }
-.som-screen-logo{
-  font-family:'DM Mono',monospace;
-  font-size:2.2rem;
-  color:var(--cyan);
-  text-shadow:0 0 30px rgba(0,212,255,.6);
-  animation:somGlow 2.5s ease infinite;
-}
-@keyframes somGlow{
-  0%,100%{text-shadow:0 0 20px rgba(0,212,255,.5)}
-  50%{text-shadow:0 0 50px rgba(0,212,255,.9),0 0 80px rgba(0,212,255,.4)}
-}
-.som-screen-name{
-  font-family:'DM Mono',monospace;
-  font-size:.9rem;
-  color:var(--cyan);
-  letter-spacing:.25em;
-  text-transform:uppercase;
-}
-.som-screen-sub{
-  font-family:'DM Mono',monospace;
-  font-size:.55rem;
-  color:rgba(0,212,255,.45);
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-/* bolinhas flutuantes */
-.som-bubbles{
+.som-iframe-fallback.hidden{opacity:0;pointer-events:none}
+.som-fallback-wave{font-size:3rem;animation:skullFloat 3s ease-in-out infinite}
+.som-fallback-name{font-family:var(--mono);font-size:.95rem;color:var(--cyan);letter-spacing:.3em;text-transform:uppercase;text-shadow:0 0 20px rgba(0,212,255,.6)}
+.som-fallback-sub{font-family:var(--mono);font-size:.52rem;color:rgba(0,212,255,.35);letter-spacing:.15em;text-transform:uppercase}
+/* bolhas no fallback */
+.som-fallback-bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.som-fb{position:absolute;border:1px solid rgba(0,212,255,.35);border-radius:50%;animation:bubUp linear infinite}
+@keyframes bubUp{0%{transform:translateY(0);opacity:.6}100%{transform:translateY(-300px);opacity:0}}
+/* overlay de "clique para abrir" aparece no hover */
+.som-preview-overlay{
   position:absolute;
   inset:0;
-  pointer-events:none;
-  overflow:hidden;
-}
-.som-bubble{
-  position:absolute;
-  border:1px solid rgba(0,212,255,.4);
-  border-radius:50%;
-  animation:bubbleFloat linear infinite;
-}
-@keyframes bubbleFloat{
-  0%{transform:translateY(0) translateX(0);opacity:.6}
-  100%{transform:translateY(-200px) translateX(20px);opacity:0}
-}
-/* badge cyan para o card SOM */
-.badge-som{
-  font-family:var(--mono);
-  font-size:.65rem;
-  color:var(--cyan);
-  background:rgba(0,212,255,.1);
-  border:1px solid rgba(0,212,255,.3);
-  padding:3px 9px;
-  border-radius:4px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-}
-.stag-som{
-  font-family:var(--mono);
-  font-size:.65rem;
-  color:var(--cyan);
-  background:rgba(0,212,255,.08);
-  border:1px solid rgba(0,212,255,.2);
-  padding:3px 9px;
-  border-radius:4px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-}
-.proj-link-som{
-  font-family:var(--mono);
-  font-size:.72rem;
-  color:var(--cyan);
-  border:1px solid rgba(0,212,255,.3);
-  padding:7px 14px;
-  border-radius:6px;
-  text-decoration:none;
-  transition:background .2s,box-shadow .2s;
-  display:inline-flex;
+  background:rgba(2,10,22,.0);
+  display:flex;
   align-items:center;
-  gap:6px;
+  justify-content:center;
+  z-index:3;
+  transition:background .25s;
+  cursor:pointer;
+  text-decoration:none;
 }
-.proj-link-som:hover{
-  background:rgba(0,212,255,.1);
-  box-shadow:0 0 18px rgba(0,212,255,.25);
+.som-preview-overlay:hover{background:rgba(2,10,22,.45)}
+.som-preview-overlay-btn{
+  background:rgba(0,212,255,.12);
+  border:1px solid rgba(0,212,255,.4);
+  color:var(--cyan);
+  font-family:var(--mono);
+  font-size:.65rem;
+  padding:9px 20px;
+  border-radius:8px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  backdrop-filter:blur(6px);
+  opacity:0;
+  transform:scale(.9);
+  transition:opacity .2s,transform .2s;
 }
-/* título ciano no card SOM */
-.som-title{
-  font-family:var(--display);
-  font-size:1.7rem;
-  margin-bottom:10px;
-  color:#fff;
+.som-preview-overlay:hover .som-preview-overlay-btn{opacity:1;transform:scale(1)}
+/* cantos decorativos de bússola no preview */
+.som-compass-corner{
+  position:absolute;
+  width:22px;height:22px;
+  z-index:4;
+  pointer-events:none;
+  opacity:.5;
 }
-.som-title span{color:var(--cyan)}
+.som-compass-corner.tl{top:8px;left:8px;border-top:2px solid rgba(200,134,10,.6);border-left:2px solid rgba(200,134,10,.6);border-radius:2px 0 0 0}
+.som-compass-corner.tr{top:8px;right:8px;border-top:2px solid rgba(200,134,10,.6);border-right:2px solid rgba(200,134,10,.6);border-radius:0 2px 0 0}
+.som-compass-corner.bl{bottom:8px;left:8px;border-bottom:2px solid rgba(200,134,10,.6);border-left:2px solid rgba(200,134,10,.6);border-radius:0 0 0 2px}
+.som-compass-corner.br{bottom:8px;right:8px;border-bottom:2px solid rgba(200,134,10,.6);border-right:2px solid rgba(200,134,10,.6);border-radius:0 0 2px 0}
 
-/* ─────────────────────────────────────────────
-   FIM CARD S.O.M
-───────────────────────────────────────────── */
-
-/* ── PROCESSO ── */
+/* PROCESSO */
 #processo{background:var(--bg)}
 .proc-steps{display:flex;flex-direction:column}
 .proc-step{display:grid;grid-template-columns:80px 1fr}
@@ -590,7 +406,7 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .passo-title{font-family:var(--display);font-size:1.5rem;margin-bottom:8px;padding-top:10px}
 .passo-desc{font-size:.88rem;color:var(--muted);line-height:1.7}
 
-/* ── CONTATO ── */
+/* CONTATO */
 #contato{background:var(--s1);position:relative;overflow:hidden}
 #contato::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(57,255,20,.05),transparent 70%)}
 .contato-inner{position:relative;z-index:1;text-align:center;max-width:700px;margin:0 auto}
@@ -610,7 +426,7 @@ section{padding:100px 40px;scroll-margin-top:80px}
 .fsub{width:100%;background:var(--green);color:#000;border:none;border-radius:8px;padding:14px;font-size:.88rem;font-weight:700;font-family:var(--mono);cursor:pointer;letter-spacing:.06em;text-transform:uppercase;transition:box-shadow .25s,transform .15s;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:8px}
 .fsub:hover{box-shadow:0 0 40px var(--green-glow);transform:translateY(-2px)}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .fcopy{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
 .fcopy span{color:var(--green)}
@@ -618,7 +434,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
 .fsoc{width:34px;height:34px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
 .fsoc:hover{border-color:var(--green);color:var(--green);background:var(--green-dim)}
 
-/* ── TOAST ── */
+/* TOAST */
 #toast{position:fixed;bottom:24px;right:24px;background:var(--s2);border:1px solid var(--green);color:var(--text);border-radius:10px;padding:12px 20px;font-family:var(--mono);font-size:.78rem;box-shadow:0 8px 32px rgba(57,255,20,.15);transform:translateY(80px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);z-index:1000;pointer-events:none;max-width:320px}
 #toast.show{transform:translateY(0);opacity:1}
 
@@ -634,10 +450,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
 <div id="toast" role="status" aria-live="polite"></div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px">
+<div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px">
   <button id="lbClose" style="position:absolute;top:18px;right:20px;background:none;border:1px solid rgba(57,255,20,.2);color:#39ff14;width:36px;height:36px;border-radius:8px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">&#10005;</button>
   <button id="lbPrev" style="position:absolute;top:50%;transform:translateY(-50%);left:16px;background:rgba(13,19,13,.8);border:1px solid rgba(57,255,20,.2);color:#39ff14;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">&#8592;</button>
-  <img id="lbImg" src="" alt="Screenshot" style="max-width:90vw;max-height:88vh;border-radius:10px;object-fit:contain;box-shadow:0 0 60px rgba(57,255,20,.12);display:none"/>
+  <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:88vh;border-radius:10px;object-fit:contain;display:none"/>
   <div id="lbPlaceholder" style="display:flex;flex-direction:column;align-items:center;gap:16px;color:#5a7a5a;font-family:'DM Mono',monospace;font-size:.8rem;text-align:center;padding:40px">
     <i class="fa-solid fa-image" style="font-size:3rem;color:rgba(57,255,20,.2)"></i>
     <span id="lbPlaceholderLabel"></span>
@@ -646,27 +462,18 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
   <div id="lbCaption" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:.72rem;color:#5a7a5a;background:rgba(0,0,0,.7);padding:6px 14px;border-radius:6px;white-space:nowrap;pointer-events:none"></div>
 </div>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="m-close" id="mobileClose">&#10005;</button>
-  <a href="#sobre" class="mobile-link">Sobre</a>
-  <a href="#servicos" class="mobile-link">Serviços</a>
-  <a href="#projetos" class="mobile-link">Projetos</a>
-  <a href="#processo" class="mobile-link">Processo</a>
-  <a href="#contato" class="mobile-link">Contato</a>
-  <a href="https://wa.me/5511978541234" target="_blank" rel="noopener noreferrer" class="mobile-link m-cta">Contratar</a>
+  <a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a><a href="#processo">Processo</a><a href="#contato">Contato</a>
+  <a href="https://wa.me/5511978541234" target="_blank" class="m-cta">Contratar</a>
 </div>
 
 <nav id="navbar">
   <a href="#hero" class="nav-logo">NH<span>.</span>dev</a>
   <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#processo">Processo</a></li>
-    <li><a href="#contato">Contato</a></li>
+    <li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#processo">Processo</a></li><li><a href="#contato">Contato</a></li>
   </ul>
-  <a href="https://wa.me/5511978541234" target="_blank" rel="noopener noreferrer" class="nav-cta">Contratar</a>
+  <a href="https://wa.me/5511978541234" target="_blank" class="nav-cta">Contratar</a>
   <button class="hamburger" id="hamburger" aria-expanded="false">&#9776;</button>
 </nav>
 
@@ -698,17 +505,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
       <div class="sobre-texto reveal d2">
         <p>Olá! Sou <strong>Nicholas Henrique de Oliveira Silva</strong>, desenvolvedor web com <span class="g">19 anos</span> e uma paixão genuína por transformar ideias em produtos digitais. Aprendi a programar por conta própria e nunca parei.</p>
         <p>Trabalho com o ciclo completo: do levantamento de requisitos ao design, da lógica do sistema ao deploy em produção. Se você precisa de um site, sistema ou plataforma — eu entrego com qualidade e dentro do prazo.</p>
-        <p>Meu projeto mais recente é o <strong>DedBoll Futebol Society</strong> — sistema completo de reservas com Firebase, painel admin, calendário em tempo real e integração com WhatsApp. Também criei o <strong style="color:var(--cyan)">S.O.M — Sea Of Movies</strong>, plataforma de filmes e séries com TMDB API, 100% em português.</p>
-        <p style="font-family:var(--mono);font-size:.7rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;margin-top:8px;"><i class="fa-solid fa-graduation-cap" style="margin-right:6px;"></i>Formação</p>
+        <p>Meu projeto mais recente é o <strong>DedBoll Futebol Society</strong> — sistema de reservas com Firebase, painel admin e integração com WhatsApp. Também criei o <strong style="color:var(--cyan)">S.O.M — Sea Of Movies</strong>, remake de um projeto do curso técnico, reconstruído do zero com TMDB API.</p>
+        <p style="font-family:var(--mono);font-size:.7rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;margin-top:8px;"><i class="fa-solid fa-graduation-cap" style="margin-right:6px"></i>Formação</p>
         <div class="edu-list">
-          <div class="edu-item">
-            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
-            <div class="edu-info"><div class="edu-title">Ensino Médio Técnico</div><div class="edu-sub">Formação técnica integrada ao ensino médio</div><span class="edu-badge done">Concluído</span></div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
-            <div class="edu-info"><div class="edu-title">Análise e Desenvolvimento de Sistemas</div><div class="edu-sub">UNIP — Universidade Paulista</div><span class="edu-badge ongoing">Em andamento</span></div>
-          </div>
+          <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-school"></i></div><div><div class="edu-title">Ensino Médio Técnico</div><div class="edu-sub">Formação técnica integrada ao ensino médio</div><span class="edu-badge done">Concluído</span></div></div>
+          <div class="edu-item"><div class="edu-icon"><i class="fa-solid fa-university"></i></div><div><div class="edu-title">Análise e Desenvolvimento de Sistemas</div><div class="edu-sub">UNIP — Universidade Paulista</div><span class="edu-badge ongoing">Em andamento</span></div></div>
         </div>
       </div>
       <div class="reveal d3">
@@ -729,7 +530,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
     <h2 class="section-title reveal d1">Serviços<span style="color:var(--green)">.</span></h2>
     <div class="servicos-grid">
       <article class="servico-card reveal d1"><div class="servico-num">01</div><div class="servico-icon"><i class="fa-solid fa-globe"></i></div><h3 class="servico-title">Sites para negócios</h3><p class="servico-desc">Landing pages e sites institucionais profissionais, responsivos, rápidos e otimizados para converter visitantes em clientes.</p><div class="servico-tags"><span class="stag">HTML/CSS</span><span class="stag">JavaScript</span><span class="stag">Responsivo</span></div></article>
-      <article class="servico-card reveal d2"><div class="servico-num">02</div><div class="servico-icon"><i class="fa-solid fa-database"></i></div><h3 class="servico-title">Sistemas web</h3><p class="servico-desc">Sistemas completos com banco de dados, autenticação, painel administrativo e integração com APIs.</p><div class="servico-tags"><span class="stag">Firebase</span><span class="stag">Auth</span><span class="stag">Dashboard</span></div></article>
+      <article class="servico-card reveal d2"><div class="servico-num">02</div><div class="servico-icon"><i class="fa-solid fa-database"></i></div><h3 class="servico-title">Sistemas web</h3><p class="servico-desc">Sistemas completos com banco de dados, autenticação, painel admin e integração com APIs.</p><div class="servico-tags"><span class="stag">Firebase</span><span class="stag">Auth</span><span class="stag">Dashboard</span></div></article>
       <article class="servico-card reveal d3"><div class="servico-num">03</div><div class="servico-icon"><i class="fa-solid fa-calendar-check"></i></div><h3 class="servico-title">Reservas e agendamento</h3><p class="servico-desc">Plataformas de reserva online com disponibilidade em tempo real e notificações via WhatsApp.</p><div class="servico-tags"><span class="stag">Tempo real</span><span class="stag">WhatsApp</span><span class="stag">Firebase</span></div></article>
       <article class="servico-card reveal d1"><div class="servico-num">04</div><div class="servico-icon"><i class="fa-solid fa-palette"></i></div><h3 class="servico-title">UI / UX Design</h3><p class="servico-desc">Interfaces bonitas, intuitivas e acessíveis. Do wireframe ao produto final.</p><div class="servico-tags"><span class="stag">Figma</span><span class="stag">Acessibilidade</span><span class="stag">Mobile-first</span></div></article>
       <article class="servico-card reveal d2"><div class="servico-num">05</div><div class="servico-icon"><i class="fa-brands fa-whatsapp"></i></div><h3 class="servico-title">Integração WhatsApp</h3><p class="servico-desc">Automação de mensagens, lembretes e notificações via WhatsApp integrados ao seu sistema.</p><div class="servico-tags"><span class="stag">Automação</span><span class="stag">wa.me</span><span class="stag">Notificações</span></div></article>
@@ -744,206 +545,236 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
     <h2 class="section-title reveal d1">Projetos<span style="color:var(--green)">.</span></h2>
     <div class="proj-grid">
 
-      <!-- ══ DEDBOLL — CAMPO DE FUTEBOL ══ -->
+      <!-- DEDBOLL -->
       <article class="proj-card feat dedboll-card reveal">
-
-        <!-- ── HEADER: campo de futebol SVG ── -->
         <div class="dedboll-pitch-wrap">
           <div class="dedboll-pitch-bg"></div>
-          <svg class="dedboll-pitch-svg" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <!-- grama escura de fundo extra -->
-            <rect width="900" height="220" fill="none"/>
-
-            <!-- linhas externas do campo -->
-            <rect x="30" y="18" width="840" height="184" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" rx="2"/>
-
-            <!-- linha do meio -->
-            <line x1="450" y1="18" x2="450" y2="202" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
-
-            <!-- círculo central -->
-            <circle cx="450" cy="110" r="42" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
-            <!-- ponto central -->
-            <circle cx="450" cy="110" r="3" fill="rgba(255,255,255,.4)"/>
-
-            <!-- área grande esquerda -->
-            <rect x="30" y="62" width="100" height="96" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-            <!-- área pequena esquerda -->
-            <rect x="30" y="88" width="42" height="44" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-            <!-- goleira esquerda -->
-            <rect x="18" y="97" width="12" height="26" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
-            <!-- ponto penalti esquerdo -->
-            <circle cx="100" cy="110" r="2.5" fill="rgba(255,255,255,.4)"/>
-            <!-- arco área esquerda -->
-            <path d="M130,75 A45,45 0 0,1 130,145" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-
-            <!-- área grande direita -->
-            <rect x="770" y="62" width="100" height="96" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-            <!-- área pequena direita -->
-            <rect x="828" y="88" width="42" height="44" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-            <!-- goleira direita -->
-            <rect x="870" y="97" width="12" height="26" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
-            <!-- ponto penalti direito -->
-            <circle cx="800" cy="110" r="2.5" fill="rgba(255,255,255,.4)"/>
-            <!-- arco área direita -->
-            <path d="M770,75 A45,45 0 0,0 770,145" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-
-            <!-- cantos do campo -->
-            <path d="M30,18 A10,10 0 0,1 40,28" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-            <path d="M870,18 A10,10 0 0,0 860,28" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-            <path d="M30,202 A10,10 0 0,0 40,192" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-            <path d="M870,202 A10,10 0 0,1 860,192" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
-
-            <!-- overlay escuro gradiente para o texto ficar legível -->
-            <defs>
-              <linearGradient id="pitchOverlay" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#0a1f0a" stop-opacity="0"/>
-                <stop offset="100%" stop-color="#0a1f0a" stop-opacity=".18"/>
-              </linearGradient>
-            </defs>
-            <rect width="900" height="220" fill="url(#pitchOverlay)"/>
+          <svg class="dedboll-pitch-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect x="30" y="16" width="840" height="168" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" rx="2"/>
+            <line x1="450" y1="16" x2="450" y2="184" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+            <circle cx="450" cy="100" r="40" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+            <circle cx="450" cy="100" r="3" fill="rgba(255,255,255,.4)"/>
+            <rect x="30" y="58" width="96" height="84" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <rect x="30" y="80" width="40" height="40" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+            <rect x="18" y="88" width="12" height="24" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+            <circle cx="96" cy="100" r="2.5" fill="rgba(255,255,255,.4)"/>
+            <path d="M126,68 A42,42 0 0,1 126,132" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+            <rect x="774" y="58" width="96" height="84" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <rect x="830" y="80" width="40" height="40" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+            <rect x="870" y="88" width="12" height="24" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+            <circle cx="804" cy="100" r="2.5" fill="rgba(255,255,255,.4)"/>
+            <path d="M774,68 A42,42 0 0,0 774,132" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+            <path d="M30,16 A8,8 0 0,1 38,24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <path d="M870,16 A8,8 0 0,0 862,24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <path d="M30,184 A8,8 0 0,0 38,176" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <path d="M870,184 A8,8 0 0,1 862,176" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <defs><linearGradient id="po" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a1f0a" stop-opacity="0"/><stop offset="100%" stop-color="#0a1f0a" stop-opacity=".2"/></linearGradient></defs>
+            <rect width="900" height="200" fill="url(#po)"/>
           </svg>
-
-          <!-- badge "Em desenvolvimento" sobre o campo -->
-          <div class="dedboll-pitch-badge">
-            <span class="dedboll-bola">⚽</span> Em desenvolvimento
-          </div>
-
-          <!-- ícones de features no canto inferior direito -->
+          <div class="dedboll-pitch-badge"><span class="dedboll-bola">⚽</span> Em desenvolvimento</div>
           <div class="dedboll-feat-icons">
-            <div class="dedboll-feat-icon" title="Firebase Realtime"><i class="fa-solid fa-bolt"></i></div>
-            <div class="dedboll-feat-icon" title="Login Google"><i class="fa-brands fa-google"></i></div>
+            <div class="dedboll-feat-icon" title="Firebase"><i class="fa-solid fa-bolt"></i></div>
+            <div class="dedboll-feat-icon" title="Google"><i class="fa-brands fa-google"></i></div>
             <div class="dedboll-feat-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></div>
             <div class="dedboll-feat-icon" title="Admin"><i class="fa-solid fa-shield-halved"></i></div>
           </div>
         </div>
-
-        <!-- ── CONTEÚDO: duas colunas ── -->
-        <div class="feat-inner" style="min-height:380px">
-          <!-- info -->
+        <div class="feat-inner" style="min-height:360px">
           <div class="dedboll-left">
             <div>
               <h3 class="proj-title" style="color:#e8f5e8">DedBoll <span style="color:var(--green)">Futebol Society</span></h3>
               <p class="proj-desc" style="color:#8aad8a">Sistema completo de reservas de quadras society. Landing page moderna, disponibilidade em tempo real, painel admin com heatmap, login com Google, cadastro multi-step e integração com WhatsApp.</p>
             </div>
-
-            <!-- barra de progresso de dev -->
             <div class="dedboll-progress">
               <div class="dedboll-progress-label"><span>Progresso do projeto</span><span>65%</span></div>
               <div class="dedboll-progress-bar"><div class="dedboll-progress-fill"></div></div>
             </div>
-
             <div class="proj-tech">
-              <span class="ttag-field">HTML</span>
-              <span class="ttag-field">CSS</span>
-              <span class="ttag-field">JavaScript</span>
-              <span class="ttag-field">Firebase Auth</span>
-              <span class="ttag-field">Firebase RTDB</span>
-              <span class="ttag-field">Tailwind</span>
+              <span class="ttag-field">HTML</span><span class="ttag-field">CSS</span><span class="ttag-field">JavaScript</span><span class="ttag-field">Firebase Auth</span><span class="ttag-field">Firebase RTDB</span><span class="ttag-field">Tailwind</span>
             </div>
             <div class="proj-links">
-              <a href="#" class="proj-link-field" style="opacity:.35;pointer-events:none;cursor:not-allowed">&#8599; Demo em breve</a>
-              <a href="https://github.com/noorion02-creator" target="_blank" rel="noopener noreferrer" class="proj-link-field"><i class="fa-brands fa-github"></i> GitHub</a>
+              <span class="proj-link-field" style="opacity:.35;cursor:not-allowed">&#8599; Demo em breve</span>
+              <a href="https://github.com/noorion02-creator" target="_blank" class="proj-link-field"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
           </div>
-
-          <!-- slideshow + vídeo -->
           <div class="feat-right">
-            <div class="feat-media-top">
-              <div class="proj-slideshow" id="slideshow"></div>
-            </div>
+            <div class="feat-media-top"><div class="proj-slideshow" id="slideshow"></div></div>
             <div class="feat-media-bottom" id="videoArea"></div>
           </div>
         </div>
       </article>
 
-      <!-- ══ S.O.M — CARD OCEANO ══ -->
+      <!-- S.O.M PIRATA — FEAT COM IFRAME -->
       <article class="proj-card som-card reveal d1">
-        <div class="proj-header" style="background:rgba(4,20,40,.8);border-bottom-color:rgba(0,212,255,.15)">
-          <div class="proj-dots">
-            <div class="proj-dot" style="background:#ef4444"></div>
-            <div class="proj-dot" style="background:#eab308"></div>
-            <div class="proj-dot" style="background:var(--cyan)"></div>
-          </div>
-          <span class="badge-som">&#9679; Live</span>
-        </div>
+        <div class="som-inner">
 
-        <!-- preview do site com janela de browser -->
-        <div class="som-preview">
-          <div class="som-preview-browser">
-            <div class="som-browser-dots">
-              <div class="som-browser-dot" style="background:#ef4444"></div>
-              <div class="som-browser-dot" style="background:#eab308"></div>
-              <div class="som-browser-dot" style="background:var(--cyan)"></div>
+          <!-- COLUNA ESQUERDA: barco + info -->
+          <div class="som-left">
+            <div class="som-ocean-header">
+              <svg class="som-ocean-svg" viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#010810"/><stop offset="100%" stop-color="#051525"/></linearGradient>
+                  <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a2540"/><stop offset="100%" stop-color="#051828"/></linearGradient>
+                  <radialGradient id="lglow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(220,140,10,.55)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+                </defs>
+                <rect width="460" height="180" fill="url(#sky)"/>
+                <circle cx="22" cy="14" r="1" fill="white" opacity=".7"><animate attributeName="opacity" values=".7;.2;.7" dur="3.1s" repeatCount="indefinite"/></circle>
+                <circle cx="60" cy="8" r=".8" fill="white" opacity=".5"><animate attributeName="opacity" values=".5;.1;.5" dur="2.4s" repeatCount="indefinite"/></circle>
+                <circle cx="95" cy="18" r="1.2" fill="white" opacity=".8"><animate attributeName="opacity" values=".8;.3;.8" dur="4s" repeatCount="indefinite"/></circle>
+                <circle cx="140" cy="6" r=".7" fill="white" opacity=".4"><animate attributeName="opacity" values=".4;.9;.4" dur="2.8s" repeatCount="indefinite"/></circle>
+                <circle cx="185" cy="11" r="1" fill="white" opacity=".6"><animate attributeName="opacity" values=".6;.1;.6" dur="3.5s" repeatCount="indefinite"/></circle>
+                <circle cx="240" cy="5" r=".9" fill="white" opacity=".5"/>
+                <circle cx="290" cy="16" r="1.1" fill="white" opacity=".7"><animate attributeName="opacity" values=".7;.2;.7" dur="2.2s" repeatCount="indefinite"/></circle>
+                <circle cx="340" cy="9" r=".8" fill="white" opacity=".45"/>
+                <circle cx="385" cy="12" r="1" fill="white" opacity=".6"><animate attributeName="opacity" values=".6;.9;.6" dur="3.8s" repeatCount="indefinite"/></circle>
+                <circle cx="420" cy="7" r=".7" fill="white" opacity=".4"/>
+                <circle cx="445" cy="18" r="1.2" fill="white" opacity=".7"><animate attributeName="opacity" values=".7;.3;.7" dur="2.7s" repeatCount="indefinite"/></circle>
+                <circle cx="390" cy="28" r="18" fill="#e8e0c8" opacity=".92"/>
+                <circle cx="384" cy="22" r="3.5" fill="rgba(0,0,0,.12)"/>
+                <circle cx="396" cy="31" r="2.5" fill="rgba(0,0,0,.1)"/>
+                <circle cx="390" cy="28" r="26" fill="none" stroke="rgba(220,210,180,.08)" stroke-width="6"/>
+                <path d="M0,108 Q20,98 40,105 Q60,112 80,103 Q100,94 120,102 Q140,110 160,101 Q180,92 200,100 Q220,108 240,98 Q260,88 280,97 Q300,106 320,96 Q340,86 360,96 Q380,106 400,97 Q420,88 440,97 Q455,104 460,100 L460,180 L0,180 Z" fill="url(#sea)"/>
+                <path d="M0,105 Q20,98 40,105 Q60,112 80,103 Q100,94 120,102 Q140,110 160,101 Q180,92 200,100 Q220,108 240,98 Q260,88 280,97 Q300,106 320,96 Q340,86 360,96 Q380,106 400,97 Q420,88 440,97 Q455,104 460,100" fill="none" stroke="rgba(150,210,255,.18)" stroke-width="1.5"><animateTransform attributeName="transform" type="translate" values="0,0;5,2;0,0" dur="5s" repeatCount="indefinite"/></path>
+                <g>
+                  <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="4s" repeatCount="indefinite"/>
+                  <path d="M85,92 Q90,105 102,112 L202,112 Q214,105 219,92 Z" fill="#3a1e08"/>
+                  <path d="M90,92 Q95,104 102,110 L202,110 Q209,104 214,92 Z" fill="#4a2a0e"/>
+                  <line x1="105" y1="95" x2="105" y2="110" stroke="#2a1405" stroke-width="1" opacity=".6"/>
+                  <line x1="125" y1="94" x2="125" y2="111" stroke="#2a1405" stroke-width="1" opacity=".6"/>
+                  <line x1="152" y1="93" x2="152" y2="112" stroke="#2a1405" stroke-width="1" opacity=".6"/>
+                  <line x1="175" y1="94" x2="175" y2="111" stroke="#2a1405" stroke-width="1" opacity=".6"/>
+                  <line x1="198" y1="95" x2="198" y2="110" stroke="#2a1405" stroke-width="1" opacity=".6"/>
+                  <rect x="88" y="86" width="126" height="8" rx="2" fill="#5a3a18"/>
+                  <rect x="88" y="86" width="126" height="3" rx="1" fill="#6a4828"/>
+                  <circle cx="115" cy="100" r="4" fill="#0a2030" stroke="#8a6020" stroke-width="1.2"/>
+                  <circle cx="152" cy="100" r="4" fill="#0a2030" stroke="#8a6020" stroke-width="1.2"/>
+                  <circle cx="189" cy="100" r="4" fill="#0a2030" stroke="#8a6020" stroke-width="1.2"/>
+                  <circle cx="113" cy="98" r="1.2" fill="rgba(200,160,80,.3)"/>
+                  <circle cx="150" cy="98" r="1.2" fill="rgba(200,160,80,.3)"/>
+                  <circle cx="187" cy="98" r="1.2" fill="rgba(200,160,80,.3)"/>
+                  <path d="M214,87 L229,101 L214,110" fill="#3a1e08"/>
+                  <rect x="148" y="48" width="4" height="40" rx="1" fill="#5a3a18"/>
+                  <rect x="117" y="62" width="3" height="26" rx="1" fill="#5a3a18"/>
+                  <path d="M152,51 Q182,54 182,84 L152,84 Z" fill="rgba(220,200,170,.88)"/>
+                  <line x1="152" y1="64" x2="181" y2="66" stroke="rgba(180,160,130,.3)" stroke-width="1"/>
+                  <line x1="152" y1="74" x2="181" y2="76" stroke="rgba(180,160,130,.3)" stroke-width="1"/>
+                  <circle cx="166" cy="64" r="7" fill="#1a1a1a"/>
+                  <circle cx="163" cy="62" r="2" fill="#f0f0f0" opacity=".9"/>
+                  <circle cx="169" cy="62" r="2" fill="#f0f0f0" opacity=".9"/>
+                  <path d="M162,67 L164,69 L166,68 L168,69 L170,67" fill="#f0f0f0" opacity=".8"/>
+                  <line x1="160" y1="71" x2="172" y2="56" stroke="#f0f0f0" stroke-width="1.5" opacity=".6"/>
+                  <line x1="172" y1="71" x2="160" y2="56" stroke="#f0f0f0" stroke-width="1.5" opacity=".6"/>
+                  <path d="M120,65 Q138,67 138,84 L120,84 Z" fill="rgba(210,190,160,.8)"/>
+                  <g transform="translate(148,40)">
+                    <rect x="0" y="-12" width="20" height="13" rx="1" fill="#111"/>
+                    <circle cx="10" cy="-7" r="3.5" fill="white" opacity=".85"/>
+                    <circle cx="8.5" cy="-8" r=".9" fill="#111"/>
+                    <circle cx="11.5" cy="-8" r=".9" fill="#111"/>
+                    <path d="M8,-5 L9,-4 L10,-4.5 L11,-4 L12,-5" fill="#111" opacity=".8"/>
+                    <animateTransform attributeName="transform" type="skewX" values="0;4;-2;0" dur="3s" repeatCount="indefinite"/>
+                  </g>
+                  <circle cx="221" cy="80" r="5" fill="url(#lglow)" opacity=".9"/>
+                  <circle cx="221" cy="80" r="2.5" fill="#f0c840"/>
+                  <rect x="219" y="76" width="4" height="8" rx="1" fill="#8a6020" opacity=".8"/>
+                </g>
+                <g transform="translate(10,86)" opacity=".55">
+                  <path d="M0,20 Q12,4 28,8 Q36,3 44,10 Q52,2 60,8 Q70,5 76,16 Q80,22 76,24 L0,24 Z" fill="#1a3015"/>
+                  <path d="M30,8 L33,-4 L36,8" fill="#5a3a10" stroke="#4a2e08" stroke-width=".5"/>
+                  <path d="M33,-4 L26,-2 L33,-4 L40,-2 Z" fill="#e8c840" opacity=".8"/>
+                </g>
+                <g transform="translate(340,84)" opacity=".3">
+                  <rect x="0" y="8" width="46" height="5" rx="2" fill="#2a1408"/>
+                  <rect x="20" y="-14" width="2" height="24" fill="#3a2010"/>
+                  <path d="M22,-12 Q32,-11 32,6 L22,6 Z" fill="rgba(200,180,150,.6)"/>
+                </g>
+                <path d="M0,125 Q40,115 80,122 Q120,129 160,119 Q200,109 240,118 Q280,127 320,117 Q360,107 400,116 Q430,123 460,114 L460,180 L0,180 Z" fill="rgba(5,15,28,.5)"/>
+              </svg>
+              <div class="som-pirate-badge"><span class="som-skull-spin">&#9760;</span> Sea Of Movies</div>
+              <div class="som-live-badge"><span class="som-live-dot"></span> Live</div>
+              <div class="som-waves">
+                <svg class="som-wave-layer" viewBox="0 0 500 28" preserveAspectRatio="none"><path d="M0,14 Q25,4 50,14 Q75,24 100,14 Q125,4 150,14 Q175,24 200,14 Q225,4 250,14 Q275,24 300,14 Q325,4 350,14 Q375,24 400,14 Q425,4 450,14 Q475,24 500,14 L500,28 L0,28 Z"/></svg>
+                <svg class="som-wave-layer" viewBox="0 0 500 28" preserveAspectRatio="none" style="opacity:.5"><path d="M0,18 Q30,8 60,18 Q90,28 120,18 Q150,8 180,18 Q210,28 240,18 Q270,8 300,18 Q330,28 360,18 Q390,8 420,18 Q450,28 500,18 L500,28 L0,28 Z"/></svg>
+              </div>
             </div>
-            <div class="som-url-bar">noorion02-creator.github.io/som.github.io/</div>
-          </div>
-          <div class="som-screen">
-            <!-- fallback visual (sempre visível, iframe por cima se carregar) -->
-            <div class="som-screen-fallback" id="somFallback">
-              <div class="som-bubbles" id="somBubbles"></div>
-              <div class="som-screen-logo">🌊</div>
-              <div class="som-screen-name">S · O · M</div>
-              <div class="som-screen-sub">Sea Of Movies</div>
+            <div class="som-body">
+              <div>
+                <h3 class="som-title"><span class="som-title-anchor">&#9875;</span>S.O.M — <span class="som-title-name">Sea Of Movies</span></h3>
+                <div class="som-remake-badge"><i class="fa-solid fa-rotate" style="font-size:.6rem"></i> Remake — Projeto do Curso Técnico</div>
+                <p class="som-desc">
+                  Nasceu como um projeto em equipe no <strong>curso técnico</strong> — um site simples de filmes. Cresceu e virou isto: plataforma completa reconstruída do zero com <span class="som-hl">TMDB API</span> 100% em português. Trailers, avaliações pessoais, lista de favoritos, 3 fontes de player e busca em tempo real. <strong>Sem cadastro. Sem anúncios. No alto-mar.</strong>
+                </p>
+                <div class="som-tech">
+                  <span class="ttag-som">HTML</span><span class="ttag-som">CSS</span><span class="ttag-som">JavaScript</span><span class="ttag-som">TMDB API</span><span class="ttag-som">LocalStorage</span><span class="ttag-som">GitHub Pages</span>
+                </div>
+              </div>
+              <div class="proj-links">
+                <a href="https://noorion02-creator.github.io/som.github.io/" target="_blank" class="proj-link-som">&#9875; Ver demo ao vivo</a>
+                <a href="https://github.com/noorion02-creator" target="_blank" class="proj-link-som rum"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
             </div>
-            <iframe
-              id="somFrame"
-              src="https://noorion02-creator.github.io/som.github.io/"
-              title="S.O.M — Sea Of Movies demo"
-              loading="lazy"
-              sandbox="allow-scripts allow-same-origin"
-              style="position:absolute;inset:0;width:180%;height:180%;border:none;transform:scale(0.556);transform-origin:top left;pointer-events:none;opacity:0;transition:opacity .6s"
-              onload="this.style.opacity='1';document.getElementById('somFallback').style.opacity='0'"
-              onerror="this.style.display='none'"
-            ></iframe>
           </div>
-        </div>
 
-        <div class="proj-body" style="padding-top:20px">
-          <h3 class="som-title">S.O.M — <span>Sea Of Movies</span></h3>
-          <p class="proj-desc" style="color:#7ab8c8">Plataforma de filmes, séries e animes com dados da TMDB API 100% em português — trailers, avaliação pessoal, lista de favoritos, 3 fontes de player e busca em tempo real. Sem cadastro, sem anúncios.</p>
-          <div class="proj-tech" style="margin-top:14px">
-            <span class="ttag" style="color:var(--cyan);border-color:rgba(0,212,255,.2)">HTML</span>
-            <span class="ttag" style="color:var(--cyan);border-color:rgba(0,212,255,.2)">CSS</span>
-            <span class="ttag" style="color:var(--cyan);border-color:rgba(0,212,255,.2)">JavaScript</span>
-            <span class="ttag" style="color:var(--cyan);border-color:rgba(0,212,255,.2)">TMDB API</span>
-            <span class="ttag" style="color:var(--cyan);border-color:rgba(0,212,255,.2)">LocalStorage</span>
+          <!-- COLUNA DIREITA: preview iframe -->
+          <div class="som-right">
+            <!-- barra do browser -->
+            <div class="som-browser-bar">
+              <div class="som-browser-dots-row">
+                <div class="som-browser-dot-sm" style="background:#ef4444"></div>
+                <div class="som-browser-dot-sm" style="background:#eab308"></div>
+                <div class="som-browser-dot-sm" style="background:var(--cyan)"></div>
+              </div>
+              <span class="som-url-lock">&#128274;</span>
+              <div class="som-url-pill">noorion02-creator.github.io/som.github.io/</div>
+            </div>
+            <!-- iframe + fallback -->
+            <div class="som-iframe-wrap" id="somPreviewWrap">
+              <!-- cantos decorativos -->
+              <div class="som-compass-corner tl"></div>
+              <div class="som-compass-corner tr"></div>
+              <div class="som-compass-corner bl"></div>
+              <div class="som-compass-corner br"></div>
+              <!-- fallback visual (fica visível até o iframe carregar) -->
+              <div class="som-iframe-fallback" id="somFallback">
+                <div class="som-fallback-bubbles" id="somBubbles"></div>
+                <div class="som-fallback-wave">🌊</div>
+                <div class="som-fallback-name">S · O · M</div>
+                <div class="som-fallback-sub">Carregando prévia...</div>
+              </div>
+              <!-- iframe do site real -->
+              <iframe
+                id="somIframe"
+                src="https://noorion02-creator.github.io/som.github.io/"
+                title="S.O.M — Sea Of Movies preview"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin"
+                onload="this.classList.add('loaded');document.getElementById('somFallback').classList.add('hidden')"
+                onerror="this.style.display='none'"
+              ></iframe>
+              <!-- overlay clicável -->
+              <a href="https://noorion02-creator.github.io/som.github.io/" target="_blank" class="som-preview-overlay" rel="noopener noreferrer">
+                <span class="som-preview-overlay-btn">&#9875; Abrir site completo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.6rem"></i></span>
+              </a>
+            </div>
           </div>
-          <div class="proj-links" style="margin-top:16px">
-            <a href="https://noorion02-creator.github.io/som.github.io/" target="_blank" rel="noopener noreferrer" class="proj-link-som">
-              &#8599; Ver demo ao vivo
-            </a>
-            <a href="https://github.com/noorion02-creator" target="_blank" rel="noopener noreferrer" class="proj-link-som">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-          </div>
+
         </div>
       </article>
 
-      <!-- ══ NH.DEV PORTFÓLIO ══ -->
+      <!-- PORTFOLIO -->
       <article class="proj-card reveal d2">
-        <div class="proj-header">
-          <div class="proj-dots"><div class="proj-dot dot-r"></div><div class="proj-dot dot-y"></div><div class="proj-dot dot-g"></div></div>
-          <span class="proj-badge">Entregue</span>
-        </div>
+        <div class="proj-header"><div class="proj-dots"><div class="proj-dot dot-r"></div><div class="proj-dot dot-y"></div><div class="proj-dot dot-g"></div></div><span class="proj-badge">Entregue</span></div>
         <div class="proj-body">
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:14px">
-            <div class="proj-logo-svg">
-              <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-                <rect width="36" height="36" rx="8" fill="#192019"/>
-                <text x="18" y="26" font-family="'DM Mono',monospace" font-size="16" font-weight="700" text-anchor="middle" fill="#39ff14">N</text>
-              </svg>
-            </div>
+            <div class="proj-logo-svg"><svg width="36" height="36" viewBox="0 0 36 36"><rect width="36" height="36" rx="8" fill="#192019"/><text x="18" y="26" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle" fill="#39ff14">N</text></svg></div>
             <h3 class="proj-title" style="margin-bottom:0">NH.dev Portfólio</h3>
           </div>
-          <p class="proj-desc">Portfólio pessoal desenvolvido do zero — design dark com neon verde, cursor customizado, slideshow com swipe, lightbox, animações de scroll, formulário integrado ao WhatsApp e SEO técnico completo.</p>
+          <p class="proj-desc">Portfólio pessoal desenvolvido do zero — design dark com neon verde, cursor customizado, slideshow com swipe, lightbox, animações de scroll e formulário integrado ao WhatsApp.</p>
           <div class="proj-tech" style="margin-top:14px"><span class="ttag">HTML</span><span class="ttag">CSS</span><span class="ttag">JavaScript</span><span class="ttag">SEO</span><span class="ttag">Responsivo</span></div>
-          <div class="proj-links" style="margin-top:14px">
-            <a href="https://portfolionicholashenrique.page.gd" target="_blank" rel="noopener noreferrer" class="proj-link">&#8599; Ver site</a>
-          </div>
+          <div class="proj-links" style="margin-top:14px"><a href="https://portfolionicholashenrique.page.gd" target="_blank" class="proj-link">&#8599; Ver site</a></div>
         </div>
       </article>
 
-      <!-- ══ PRÓXIMOS ══ -->
+      <!-- PROXIMO -->
       <article class="proj-card reveal d3">
         <div class="proj-header"><div class="proj-dots"><div class="proj-dot dot-r"></div><div class="proj-dot dot-y"></div><div class="proj-dot dot-g"></div></div><span class="proj-badge">Em breve</span></div>
         <div class="proj-body">
@@ -978,18 +809,18 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
       <h2 class="section-title reveal d1" style="font-size:clamp(3rem,9vw,7rem)">Bora<br>trabalhar<span style="color:var(--green)">?</span></h2>
       <p class="contato-sub reveal d2">Tem um projeto em mente? Me manda uma mensagem — respondo em até 24h e a conversa é sem compromisso.</p>
       <div class="contato-links reveal d2">
-        <a href="https://wa.me/5511978541234" target="_blank" rel="noopener noreferrer" class="clink"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/5511978541234" target="_blank" class="clink"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="mailto:nicholashenrique659@gmail.com" class="clink"><i class="fa-solid fa-envelope"></i> E-mail</a>
-        <a href="https://www.instagram.com/no.nicholas/" target="_blank" rel="noopener noreferrer" class="clink"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        <a href="https://github.com/noorion02-creator" target="_blank" rel="noopener noreferrer" class="clink"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.instagram.com/no.nicholas/" target="_blank" class="clink"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://github.com/noorion02-creator" target="_blank" class="clink"><i class="fa-brands fa-github"></i> GitHub</a>
       </div>
       <div class="cform reveal d3">
         <div class="form-row">
-          <div class="fg"><label for="c-nome">Seu nome</label><input type="text" id="c-nome" placeholder="Seu Nome" autocomplete="name" required></div>
-          <div class="fg"><label for="c-email">E-mail</label><input type="email" id="c-email" placeholder="exemplo@email.com" autocomplete="email" required></div>
+          <div class="fg"><label for="c-nome">Seu nome</label><input type="text" id="c-nome" placeholder="Seu Nome" autocomplete="name"></div>
+          <div class="fg"><label for="c-email">E-mail</label><input type="email" id="c-email" placeholder="exemplo@email.com" autocomplete="email"></div>
         </div>
         <div class="fg"><label for="c-proj">Sobre o projeto</label><input type="text" id="c-proj" placeholder="Ex: Site para minha academia"></div>
-        <div class="fg"><label for="c-msg">Mensagem</label><textarea id="c-msg" rows="5" placeholder="Me conta o que você precisa..." required></textarea></div>
+        <div class="fg"><label for="c-msg">Mensagem</label><textarea id="c-msg" rows="5" placeholder="Me conta o que você precisa..."></textarea></div>
         <button type="button" class="fsub" id="formBtn"><i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp</button>
       </div>
     </div>
@@ -1000,117 +831,66 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 40px
 <footer>
   <p class="fcopy">2026 <span>Nicholas Henrique</span> — Feito com código e café.</p>
   <nav class="fsociais">
-    <a href="https://github.com/noorion02-creator" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.instagram.com/no.nicholas/" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://wa.me/5511978541234" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://github.com/noorion02-creator" target="_blank" class="fsoc" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/no.nicholas/" target="_blank" class="fsoc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/5511978541234" target="_blank" class="fsoc" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   </nav>
 </footer>
 
 <div id="a11y-live" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap"></div>
 
 <script>
-/* ═══════════════════════════════════════════
-   SLIDES DO DEDBOLL
-═══════════════════════════════════════════ */
-const DRIVE_MODE = false;
-const VIDEO_DRIVE_ID = '1kgtJLanwO4UULu7O1-Kiv_6wSIM8FM69';
-const SLIDES = [
-  { src:'dedboll-home.png',           label:'Landing Page',           icon:'fa-house' },
-  { src:'dedboll-estrutura.png',      label:'Estrutura Completa',     icon:'fa-sitemap' },
-  { src:'dedboll-como-reservar.png',  label:'Como Reservar',          icon:'fa-calendar-plus' },
-  { src:'dedboll-galeria.png',        label:'Galeria',                icon:'fa-images' },
-  { src:'dedboll-avaliacoes.png',     label:'Avaliações Google',      icon:'fa-star' },
-  { src:'dedboll-cta.png',            label:'CTA + Instagram',        icon:'fa-bullhorn' },
-  { src:'dedboll-footer.png',         label:'Footer + Mapa',          icon:'fa-map-location-dot' },
-  { src:'dedboll-reserva.png',        label:'Sistema de Reservas',    icon:'fa-calendar-check' },
-  { src:'dedboll-quadra-horario.png', label:'Quadra & Horário',       icon:'fa-futbol' },
-  { src:'dedboll-admin.png',          label:'Controle de Reservas',   icon:'fa-table-list' },
-  { src:'dedboll-login.png',          label:'Login',                  icon:'fa-right-to-bracket' },
-  { src:'dedboll-cadastro.png',       label:'Cadastro Multi-step',    icon:'fa-user-plus' },
-  { src:'dedboll-heatmap.png',        label:'Painel Admin — Heatmap', icon:'fa-fire' },
-  { src:'dedboll-lista.png',          label:'Painel Admin — Lista',   icon:'fa-list-check' },
+const DRIVE_MODE=false;
+const VIDEO_DRIVE_ID='1kgtJLanwO4UULu7O1-Kiv_6wSIM8FM69';
+const SLIDES=[
+  {src:'dedboll-home.png',label:'Landing Page',icon:'fa-house'},
+  {src:'dedboll-estrutura.png',label:'Estrutura Completa',icon:'fa-sitemap'},
+  {src:'dedboll-como-reservar.png',label:'Como Reservar',icon:'fa-calendar-plus'},
+  {src:'dedboll-galeria.png',label:'Galeria',icon:'fa-images'},
+  {src:'dedboll-avaliacoes.png',label:'Avaliações Google',icon:'fa-star'},
+  {src:'dedboll-cta.png',label:'CTA + Instagram',icon:'fa-bullhorn'},
+  {src:'dedboll-footer.png',label:'Footer + Mapa',icon:'fa-map-location-dot'},
+  {src:'dedboll-reserva.png',label:'Sistema de Reservas',icon:'fa-calendar-check'},
+  {src:'dedboll-quadra-horario.png',label:'Quadra & Horário',icon:'fa-futbol'},
+  {src:'dedboll-admin.png',label:'Controle de Reservas',icon:'fa-table-list'},
+  {src:'dedboll-login.png',label:'Login',icon:'fa-right-to-bracket'},
+  {src:'dedboll-cadastro.png',label:'Cadastro Multi-step',icon:'fa-user-plus'},
+  {src:'dedboll-heatmap.png',label:'Painel Admin — Heatmap',icon:'fa-fire'},
+  {src:'dedboll-lista.png',label:'Painel Admin — Lista',icon:'fa-list-check'},
 ];
-function getImgSrc(s){ return DRIVE_MODE&&s.id&&s.id.length>10?'https://drive.google.com/uc?export=view&id='+s.id:s.src||''; }
-function hasImg(s){ return DRIVE_MODE?!!(s.id&&s.id.length>10):!!(s.src&&s.src.length>0); }
+function getImgSrc(s){return DRIVE_MODE&&s.id&&s.id.length>10?'https://drive.google.com/uc?export=view&id='+s.id:s.src||'';}
+function hasImg(s){return DRIVE_MODE?!!(s.id&&s.id.length>10):!!(s.src&&s.src.length>0);}
 
-/* ═══════════════════════════════════════════
-   SOM BUBBLES (animação do card)
-═══════════════════════════════════════════ */
-(function(){
-  const c = document.getElementById('somBubbles');
-  if(!c) return;
-  for(let i=0;i<8;i++){
-    const b = document.createElement('div');
-    b.className = 'som-bubble';
-    const sz = 4+Math.random()*12;
-    b.style.cssText = `
-      width:${sz}px;height:${sz}px;
-      left:${Math.random()*100}%;
-      bottom:${Math.random()*100}%;
-      animation-duration:${3+Math.random()*4}s;
-      animation-delay:${Math.random()*3}s;
-    `;
-    c.appendChild(b);
-  }
-})();
-
-/* ═══════════════════════════════════════════
-   CURSOR
-═══════════════════════════════════════════ */
-const curEl=document.getElementById('cursor'),ringEl=document.getElementById('cursorRing');
+/* CURSOR */
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX;my=e.clientY;
-  curEl.style.left=(mx-6)+'px';curEl.style.top=(my-6)+'px';
-});
-(function animRing(){
-  rx+=(mx-rx-18)*.12;ry+=(my-ry-18)*.12;
-  ringEl.style.left=rx+'px';ringEl.style.top=ry+'px';
-  requestAnimationFrame(animRing);
-})();
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=(mx-6)+'px';cur.style.top=(my-6)+'px';});
+(function tick(){rx+=(mx-rx-18)*.12;ry+=(my-ry-18)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick);})();
 
-/* ═══════════════════════════════════════════
-   NAVBAR SCROLL
-═══════════════════════════════════════════ */
+/* NAVBAR */
 const nav=document.getElementById('navbar');
-window.addEventListener('scroll',()=>{
-  nav.style.boxShadow=scrollY>40
-    ?'0 4px 48px rgba(0,0,0,.7),0 0 24px rgba(57,255,20,.1)'
-    :'0 4px 40px rgba(0,0,0,.5)';
-},{passive:true});
+window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>40?'0 4px 48px rgba(0,0,0,.7),0 0 24px rgba(57,255,20,.1)':'0 4px 40px rgba(0,0,0,.5)';},{passive:true});
 
-/* ═══════════════════════════════════════════
-   REVEAL / SKILL BARS / COUNTERS
-═══════════════════════════════════════════ */
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+/* REVEAL */
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-new IntersectionObserver(([e])=>{
-  if(!e.isIntersecting)return;
-  e.target.querySelectorAll('.skill-fill').forEach(b=>b.style.width=b.dataset.w+'%');
-},{threshold:.3}).observe(document.getElementById('sobre'));
+/* SKILL BARS */
+new IntersectionObserver(([e])=>{if(!e.isIntersecting)return;e.target.querySelectorAll('.skill-fill').forEach(b=>b.style.width=b.dataset.w+'%');},{threshold:.3}).observe(document.getElementById('sobre'));
 
+/* COUNTERS */
 document.querySelectorAll('[data-count]').forEach(el=>{
   new IntersectionObserver(([e])=>{
     if(!e.isIntersecting)return;
     const end=+el.dataset.count,suf=el.dataset.suffix||'+';
-    let c=0;
-    const iv=setInterval(()=>{c++;el.textContent=c+(c>=end?suf:'');if(c>=end)clearInterval(iv);},1400/end);
+    let c=0;const iv=setInterval(()=>{c++;el.textContent=c+(c>=end?suf:'');if(c>=end)clearInterval(iv);},1400/end);
   },{threshold:.5}).observe(el);
 });
 
-/* ═══════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════ */
-function toast(msg){
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  document.getElementById('a11y-live').textContent=msg;
-  setTimeout(()=>t.classList.remove('show'),3500);
-}
+/* TOAST */
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');document.getElementById('a11y-live').textContent=msg;setTimeout(()=>t.classList.remove('show'),3500);}
 
-/* ═══════════════════════════════════════════
-   FORMULÁRIO
-═══════════════════════════════════════════ */
+/* FORM */
 document.getElementById('formBtn').addEventListener('click',()=>{
   const nome=document.getElementById('c-nome').value.trim();
   const email=document.getElementById('c-email').value.trim();
@@ -1122,35 +902,19 @@ document.getElementById('formBtn').addEventListener('click',()=>{
   toast('Abrindo WhatsApp...');
 });
 
-/* ═══════════════════════════════════════════
-   MOBILE MENU
-═══════════════════════════════════════════ */
+/* MOBILE MENU */
 const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu'),mobileClose=document.getElementById('mobileClose');
-const openMenu=()=>{mobileMenu.classList.add('open');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'};
-const closeMenu=()=>{mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow=''};
-hamburger.addEventListener('click',openMenu);
-mobileClose.addEventListener('click',closeMenu);
-document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click',closeMenu));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileMenu.classList.contains('open'))closeMenu()});
+hamburger.addEventListener('click',()=>{mobileMenu.classList.add('open');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';});
+mobileClose.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';});
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
 
-/* ═══════════════════════════════════════════
-   ACTIVE NAV
-═══════════════════════════════════════════ */
+/* ACTIVE NAV */
 const secs=document.querySelectorAll('section[id]'),nls=document.querySelectorAll('.nav-links a');
-new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}
-}),{threshold:.45}).observe.bind(new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}
-}),{threshold:.45}));
-
-const ao=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}
-}),{threshold:.45});
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}}),{threshold:.45}).observe;
+const ao=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){nls.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}}),{threshold:.45});
 secs.forEach(s=>ao.observe(s));
 
-/* ═══════════════════════════════════════════
-   VÍDEO DEDBOLL
-═══════════════════════════════════════════ */
+/* VIDEO */
 (function(){
   const area=document.getElementById('videoArea');if(!area)return;
   if(VIDEO_DRIVE_ID&&VIDEO_DRIVE_ID.length>10){
@@ -1165,9 +929,7 @@ secs.forEach(s=>ao.observe(s));
   }
 })();
 
-/* ═══════════════════════════════════════════
-   SLIDESHOW + LIGHTBOX (DedBoll)
-═══════════════════════════════════════════ */
+/* SLIDESHOW + LIGHTBOX */
 (function(){
   const container=document.getElementById('slideshow');if(!container)return;
   const total=SLIDES.length;
@@ -1176,45 +938,56 @@ secs.forEach(s=>ao.observe(s));
     const frame=document.createElement('div');frame.className='slide-frame';frame.style.width=(100/total)+'%';
     if(hasImg(s)){
       const img=document.createElement('img');img.alt=s.label;img.decoding='async';img.loading=i===0?'eager':'lazy';img.src=getImgSrc(s);
-      img.onerror=function(){this.style.display='none';frame.appendChild(mkPh(s))};
+      img.onerror=function(){this.style.display='none';frame.appendChild(mkPh(s));};
       frame.appendChild(img);
     }else{frame.appendChild(mkPh(s));}
     const lbl=document.createElement('span');lbl.className='slide-label';lbl.textContent=s.label;frame.appendChild(lbl);
     track.appendChild(frame);
   });
-  function mkPh(s){const ph=document.createElement('div');ph.className='slide-placeholder';ph.innerHTML=`<div class="slide-placeholder-corner">Aguardando imagem</div><div class="slide-placeholder-icon"><i class="fa-solid ${s.icon||'fa-image'}"></i></div><div class="slide-placeholder-title">${s.label}</div><div class="slide-placeholder-sub">Coloque o ID do Google Drive no array <strong style="color:var(--green)">SLIDES</strong></div>`;return ph;}
-  const btnPrev=document.createElement('button');btnPrev.className='slide-btn slide-prev';btnPrev.setAttribute('aria-label','Anterior');btnPrev.innerHTML='&#8592;';
-  const btnNext=document.createElement('button');btnNext.className='slide-btn slide-next';btnNext.setAttribute('aria-label','Próximo');btnNext.innerHTML='&#8594;';
+  function mkPh(s){const ph=document.createElement('div');ph.className='slide-placeholder';ph.innerHTML='<div class="slide-placeholder-corner">Aguardando imagem</div><div class="slide-placeholder-icon"><i class="fa-solid '+s.icon+'"></i></div><div class="slide-placeholder-title">'+s.label+'</div><div class="slide-placeholder-sub">Coloque o arquivo na pasta do projeto</div>';return ph;}
+  const btnP=document.createElement('button');btnP.className='slide-btn slide-prev';btnP.setAttribute('aria-label','Anterior');btnP.innerHTML='&#8592;';
+  const btnN=document.createElement('button');btnN.className='slide-btn slide-next';btnN.setAttribute('aria-label','Próximo');btnN.innerHTML='&#8594;';
   const dotsEl=document.createElement('div');dotsEl.className='slide-dots';
   const countEl=document.createElement('div');countEl.className='slide-count';countEl.textContent='1 / '+total;
-  container.appendChild(track);container.appendChild(btnPrev);container.appendChild(btnNext);container.appendChild(dotsEl);container.appendChild(countEl);
-  SLIDES.forEach((_,i)=>{const d=document.createElement('button');d.className='slide-dot'+(i===0?' on':'');d.setAttribute('aria-label','Slide '+(i+1));d.addEventListener('click',e=>{e.stopPropagation();go(i)});dotsEl.appendChild(d)});
+  container.appendChild(track);container.appendChild(btnP);container.appendChild(btnN);container.appendChild(dotsEl);container.appendChild(countEl);
+  SLIDES.forEach((_,i)=>{const d=document.createElement('button');d.className='slide-dot'+(i===0?' on':'');d.setAttribute('aria-label','Slide '+(i+1));d.addEventListener('click',e=>{e.stopPropagation();go(i);});dotsEl.appendChild(d);});
   let cur=0;
-  function go(n){cur=(n+total)%total;track.style.transform='translateX(-'+(cur*(100/total))+'%)';countEl.textContent=(cur+1)+' / '+total;dotsEl.querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('on',i===cur))}
-  btnPrev.addEventListener('click',e=>{e.stopPropagation();go(cur-1)});
-  btnNext.addEventListener('click',e=>{e.stopPropagation();go(cur+1)});
+  function go(n){cur=(n+total)%total;track.style.transform='translateX(-'+(cur*(100/total))+'%)';countEl.textContent=(cur+1)+' / '+total;dotsEl.querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('on',i===cur));}
+  btnP.addEventListener('click',e=>{e.stopPropagation();go(cur-1);});
+  btnN.addEventListener('click',e=>{e.stopPropagation();go(cur+1);});
   let timer=setInterval(()=>go(cur+1),3500);
-  const pauseAuto=()=>clearInterval(timer);
-  const resumeAuto=()=>{timer=setInterval(()=>go(cur+1),3500)};
-  container.addEventListener('mouseenter',pauseAuto);container.addEventListener('mouseleave',resumeAuto);
-  let tx=0,ty=0,dragging=false,moved=false;
-  container.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;dragging=true;moved=false;pauseAuto()},{passive:true});
-  container.addEventListener('touchmove',e=>{if(!dragging)return;const dx=Math.abs(e.touches[0].clientX-tx),dy=Math.abs(e.touches[0].clientY-ty);if(dx>dy&&dx>6){moved=true;e.preventDefault();}},{passive:false});
-  container.addEventListener('touchend',e=>{if(!dragging)return;dragging=false;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(moved&&Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){dx<0?go(cur+1):go(cur-1)}else if(!moved){lbOpen(cur)}resumeAuto()},{passive:true});
-  container.addEventListener('click',e=>{if(e.target.classList.contains('slide-btn')||e.target.classList.contains('slide-dot'))return;lbOpen(cur)});
+  const pa=()=>clearInterval(timer);
+  const ra=()=>{timer=setInterval(()=>go(cur+1),3500);};
+  container.addEventListener('mouseenter',pa);container.addEventListener('mouseleave',ra);
+  let tx=0,ty=0,drag=false,moved=false;
+  container.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;drag=true;moved=false;pa();},{passive:true});
+  container.addEventListener('touchmove',e=>{if(!drag)return;const dx=Math.abs(e.touches[0].clientX-tx),dy=Math.abs(e.touches[0].clientY-ty);if(dx>dy&&dx>6){moved=true;e.preventDefault();}},{passive:false});
+  container.addEventListener('touchend',e=>{if(!drag)return;drag=false;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(moved&&Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){dx<0?go(cur+1):go(cur-1);}else if(!moved){lbOpen(cur);}ra();},{passive:true});
+  container.addEventListener('click',e=>{if(e.target.classList.contains('slide-btn')||e.target.classList.contains('slide-dot'))return;lbOpen(cur);});
   const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbPh=document.getElementById('lbPlaceholder'),lbPhLabel=document.getElementById('lbPlaceholderLabel'),lbCap=document.getElementById('lbCaption');
   let lbCur=0;
-  function lbOpen(n){lbCur=n;const s=SLIDES[lbCur];lbCap.textContent=s.label+' — '+(lbCur+1)+' / '+total;if(hasImg(s)){lbImg.src=getImgSrc(s);lbImg.style.display='block';lbPh.style.display='none'}else{lbImg.style.display='none';lbPhLabel.textContent=s.label;lbPh.style.display='flex'}lb.style.display='flex';document.body.style.overflow='hidden';pauseAuto()}
-  function lbClose(){lb.style.display='none';document.body.style.overflow='';resumeAuto()}
-  function lbGo(n){lbCur=(n+total)%total;const s=SLIDES[lbCur];lbCap.textContent=s.label+' — '+(lbCur+1)+' / '+total;if(hasImg(s)){lbImg.src=getImgSrc(s);lbImg.style.display='block';lbPh.style.display='none'}else{lbImg.style.display='none';lbPhLabel.textContent=s.label;lbPh.style.display='flex'}}
+  function lbShow(n){lbCur=n;const s=SLIDES[lbCur];lbCap.textContent=s.label+' — '+(lbCur+1)+' / '+total;if(hasImg(s)){lbImg.src=getImgSrc(s);lbImg.style.display='block';lbPh.style.display='none';}else{lbImg.style.display='none';lbPhLabel.textContent=s.label;lbPh.style.display='flex';}}
+  function lbOpen(n){lbShow(n);lb.style.display='flex';document.body.style.overflow='hidden';pa();}
+  function lbClose(){lb.style.display='none';document.body.style.overflow='';ra();}
   document.getElementById('lbClose').addEventListener('click',lbClose);
-  document.getElementById('lbPrev').addEventListener('click',()=>lbGo(lbCur-1));
-  document.getElementById('lbNext').addEventListener('click',()=>lbGo(lbCur+1));
-  lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
+  document.getElementById('lbPrev').addEventListener('click',()=>lbShow((lbCur-1+total)%total));
+  document.getElementById('lbNext').addEventListener('click',()=>lbShow((lbCur+1)%total));
+  lb.addEventListener('click',e=>{if(e.target===lb)lbClose();});
   let ltx=0;
-  lb.addEventListener('touchstart',e=>{ltx=e.touches[0].clientX},{passive:true});
-  lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-ltx;if(Math.abs(dx)>40)dx<0?lbGo(lbCur+1):lbGo(lbCur-1)},{passive:true});
-  document.addEventListener('keydown',e=>{if(lb.style.display!=='flex')return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbGo(lbCur-1);if(e.key==='ArrowRight')lbGo(lbCur+1)});
+  lb.addEventListener('touchstart',e=>{ltx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-ltx;if(Math.abs(dx)>40)lbShow(dx<0?(lbCur+1)%total:(lbCur-1+total)%total);},{passive:true});
+  document.addEventListener('keydown',e=>{if(lb.style.display!=='flex')return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbShow((lbCur-1+total)%total);if(e.key==='ArrowRight')lbShow((lbCur+1)%total);});
+})();
+
+/* BOLHAS FALLBACK DO S.O.M */
+(function(){
+  const c=document.getElementById('somBubbles');if(!c)return;
+  for(let i=0;i<10;i++){
+    const b=document.createElement('div');b.className='som-fb';
+    const sz=4+Math.random()*14;
+    b.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*90)+'%;bottom:'+(Math.random()*80)+'%;animation-duration:'+(3+Math.random()*5)+'s;animation-delay:'+(Math.random()*4)+'s';
+    c.appendChild(b);
+  }
 })();
 </script>
 </body>
